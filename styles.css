@@ -1,0 +1,155 @@
+/* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #F0EFEA;
+  display: grid;
+}
+
+
+.header {
+  background-image: linear-gradient(to right, rgb(51, 0, 80), rgb(82, 4, 128));
+  color: white;
+  position: fixed;
+  z-index: 1000; 
+  height: 100px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.header p{
+  display: flex;
+    /* Usa o modelo de layout flexível para o logotipo */
+    margin-top: auto;
+    /* Alinha o logotipo ao centro verticalmente */
+    margin-bottom: auto;
+    margin-left: 10%;
+    /* Define uma margem à esquerda */
+    text-align: left;
+    /* Alinha o texto do logotipo à esquerda */
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
+}
+
+.header a{
+  color: #fff;
+  display: flex;
+  /* Usa o modelo de layout flexível para o logotipo */
+  margin-top: auto;
+  /* Alinha o logotipo ao centro verticalmente */
+  margin-bottom: auto;
+  margin-left: 40%;
+  /* Define uma margem à esquerda */
+  text-align: right;
+  /* Alinha o texto do logotipo à esquerda */
+  align-items: center;
+  /* Alinha os itens verticalmente ao centro */
+}
+
+
+.header a:hover{
+  color: #18cf00;
+}
+
+/* Conteúdo principal */
+.main {
+  padding-top: 140px;
+  padding-left: 50px;
+  padding-right:50px;
+  display: grid;
+}
+
+.main h2 {
+  color: #000;
+  margin-bottom: 20px;
+  text-align: center; 
+  font-size: 20px;
+}
+
+/* Grade dos botões */
+.buttons-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3 , 1fr); /* Quatro colunas */
+  gap: 40px; /* Espaçamento entre as caixas */
+  padding: 50px;
+}
+
+@media (max-width: 920px) {
+  .header a{
+    margin-left: 30%;
+  }
+
+  .header p{
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header a{
+    margin-left: 30%;
+  }
+  .buttons-grid {
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .header a{
+    margin-left: 10%;
+  }
+
+  .header p{
+    margin-left: 5%;
+  }
+
+  .buttons-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+  }
+}
+
+/* Caixinhas dos botões */
+.button-card {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 35px;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.button-card span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #333;
+}
+
+/* Botão */
+.button-card .btn {
+  background-color: #0d7400; /* Azul escuro */
+  color: white;
+  text-decoration: none;
+  padding: 10px 40px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button-card .btn:hover {
+  background-color: #18cf00; /* Azul mais claro */
+}
